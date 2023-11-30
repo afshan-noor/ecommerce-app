@@ -1,0 +1,35 @@
+.button {
+  color: black;
+  background-color: #4b5563;
+}
+.button1Enabled {
+  width: 150px;
+  border-radius: 13px;
+  color: black;
+  background-color: #4b5563;
+  padding: 15px 10px;
+  margin-right: 5px;
+}
+
+.button1Disabled {
+  background-color: #f9fafb;
+  color: black;
+  cursor: not-allowed;
+  padding: 15px 10px;
+  margin-right: 5px;
+  width: 150px;
+  border-radius: 13px;
+}
+.button:focus {
+  outline: none;
+}
+/* 
+button:disabled,
+button:focus:disabled,
+button:hover:disabled,
+button:active:disabled {
+  background: #ccc;
+  border-color: #ccc;
+  color: #666666;
+  cursor: not-allowed;
+} */

@@ -1,0 +1,117 @@
+.box {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 20px 30px;
+  width: 100%;
+  max-width: 1200px;
+}
+.card {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.heading {
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.list {
+  display: flex;
+  flex-direction: row;
+  gap: 83px;
+  border-bottom: 2px solid rgb(233, 230, 230);
+  margin-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+}
+.list1 {
+  display: flex;
+  flex-direction: row;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  gap: 53px;
+  border-bottom: 2px solid rgb(233, 230, 230);
+}
+.lists {
+  display: flex;
+  flex-direction: row;
+  gap: 108px;
+  padding: 10px;
+}
+
+.image {
+  width: 70px;
+  background-color: rgb(226, 223, 223);
+  border-radius: 5px;
+}
+.cancel {
+  background-color: rgb(226, 223, 223);
+  color: black;
+  padding: 0 5px;
+  cursor: pointer;
+  border-radius: 7px;
+  max-width: fit-content;
+  margin-bottom: 28px;
+  /* font-size: 28px !important; */
+  padding-top: 10px;
+}
+.add {
+  background-color: rgb(226, 223, 223);
+  color: black;
+  padding: 0 5px;
+  cursor: pointer;
+  border-radius: 7px;
+  max-width: fit-content;
+  margin-bottom: 28px;
+  font-size: 28px !important;
+}
+.button {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.summary {
+  width: 40%;
+  margin-top: 30px;
+}
+.totalAmount {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 200px;
+  margin: 15px 0;
+}
+.Sheading {
+  font-size: 25px;
+  font-weight: bold;
+  /* margin-bottom: 40px; */
+}
+.Amount {
+  margin: 45px 0;
+  padding-bottom: 10px;
+  border-top: 2px solid rgb(233, 230, 230);
+  border-bottom: 2px solid rgb(233, 230, 230);
+}
+.TotalAmount {
+  border-bottom: 2px solid rgb(233, 230, 230);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 200px;
+  margin: 15px 0;
+  color: red;
+  font-weight: bold;
+}
+.box1 {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  padding-top: 100px;
+}
+.store {
+  color: #3b82f6;
+}
