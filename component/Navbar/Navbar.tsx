@@ -6,7 +6,10 @@ import Link from "next/link";
 
 const Navbar: React.FC = () => {
   const { state } = useCart();
-  const cartQuantity = state.cart.length;
+  // const cartQuantity = state.cart.length;
+  const numberOfCartItems = Array.isArray(state.cart)
+    ? state.cart.reduce((curNumber, cart) => curNumber + cart.quantity, 0)
+    : 0;
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -26,7 +29,7 @@ const Navbar: React.FC = () => {
       <div className={styles.box1}>
         <p className={styles.heading}>Account</p>
         <p className={styles.heading} onClick={openModal}>
-          Cart ({cartQuantity})
+          Cart ({numberOfCartItems})
         </p>
       </div>
 

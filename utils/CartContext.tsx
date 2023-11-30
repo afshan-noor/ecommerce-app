@@ -6,7 +6,6 @@ import React, {
   useEffect,
 } from "react";
 
-// Define the CartItem interface
 interface CartItem {
   id: number;
   name: string;
@@ -15,35 +14,30 @@ interface CartItem {
   quantity: number;
 }
 
-// Define the CartState interface
 interface CartState {
+  [x: string]: any;
   cart: CartItem[];
   totalAmount: number;
 }
 
-// Define the possible actions for the cart
 type CartAction =
   | { type: "ADD_TO_CART"; payload: CartItem }
   | { type: "UPDATE_QUANTITY"; payload: { id: number; quantity: number } }
   | { type: "SET_CART"; payload: CartItem[] }
   | { type: string; payload?: any };
 
-// Define the context props
 interface CartContextProps {
   state: CartState;
   dispatch: React.Dispatch<CartAction>;
 }
 
-// Create the context
 const CartContext = createContext<CartContextProps | undefined>(undefined);
 
-// Define the initial state
 const initialState: CartState = {
   cart: [],
   totalAmount: 0,
 };
 
-// Define the cart reducer
 const cartReducer = (state: CartState, action: CartAction): CartState => {
   switch (action.type) {
     case "ADD_TO_CART":
@@ -75,7 +69,6 @@ const cartReducer = (state: CartState, action: CartAction): CartState => {
       );
 
       if (!updatedItem) {
-        // Handle the case where the item is not found
         return state;
       }
 
@@ -138,10 +131,8 @@ const CartProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
       const parsedCart = JSON.parse(savedCart);
       dispatch({ type: "SET_CART", payload: parsedCart });
     }
-    // console.log("saveCart::", savedCart);
   }, []);
 
-  // Save cart data to localStorage whenever it changes
   useEffect(() => {
     localStorage.setItem("cart", JSON.stringify(state.cart));
   }, [state.cart]);
